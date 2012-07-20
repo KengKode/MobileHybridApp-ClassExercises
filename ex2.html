@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="moviesPage">
+		<div data-role="header"><h1>My Movies</h1></div>
+		<div data-role="content">
+			<div><button id="showMeButton">Show Me</button></div>
+			<ul data-role="listview" data-inset="true" id="moviesList">
+				<li data-role="list-divider" data-theme="c">I'm disappering soon ...</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+<script>
+	$('#moviesPage').bind('pageinit', function() {
+		$('#showMeButton').bind('click', function() {
+			$.get('mymovies.json', {}, function(res, code){
+				var moviesList = $('#moviesList');
+				moviesList.empty();
+				moviesList.append($('<li>').data('role','list-divider').append('Top List'));
+
+				/**
+				Objective: Show Movies data from JSON on Screen in ListView "#moviesList"
+
+				Steps:
+					- Create JSON file named "mymovies.json".
+					- Modify the code below to achieve the objective.
+					- You must pass the finish line to claim your success.
+
+				Finish Line:
+					- Your movies list should have Movie Name and Year of Release showing like this:
+
+						[ MovieName-1       (YYYY) (>)]
+						[ MovieName-2       (YYYY) (>)]
+						...
+						..
+						.
+
+						Notes: 
+							Movie Name must be in <a>
+							Year of Release (YYYY) must be displayed in bubble
+
+				Hints:
+					- You should name JSON file as 'mymovies.json', otherwise you need to change your code at $.get(filename,..
+					- Each data in JSON must have at least 2 fields: name & year.
+					- Do not forget "," between fields and records in JSON.
+
+					- Iterate your data with "for" statement, from 0 to the last item of "res" variable
+
+					- To display YYYY in bubble, put it in <span class="ui-li-count">YYYY</span>.
+					- Beware the <span> must be inside <a>.
+					- The full <li> might look like this:
+
+						<li><a ..>Movie.. <span ..>YYYY...
+
+					- Attribute "href" in <a> is not necessary, you can omit it.
+
+					- You could use Tag Builder like Lab 4 to build <li> like these:
+
+						var yourLi = $('<li>');
+						var yourA = $('<a..
+						var yourSpan = $('<span..
+
+						yourSpan.addClass(...);
+						yourSpan.append(YYYY);
+
+						yourA.append(MovieName);
+						yourA.append(yourSpan);
+
+						yourLi.append(yourA);
+
+						moviesList.append(yourLi);
+
+
+					  or use simple string manipulation like Lab 3: 
+
+					  	s += '<li><a>' + MovieName + '<span class="..">' + YYYY + ...;
+					  	movieList.append(s);
+
+					- BTW, get MovieName from res[x].name and YYYY from res[x].year
+					  where x is a row no of each iteration.
+
+				*/
+				//
+				// Enter your code below
+				/////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+				/////////////////////////////////////////////////////////
+				// Your code should end above
+
+				moviesList.listview('refresh',true);
+
+			}, 'json');
+		})
+	})
+</script>
+</body>
+</html>
