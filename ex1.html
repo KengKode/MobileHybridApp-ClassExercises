@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="ex1Page">
+		<div data-role="header"><h1>Exercise 1</h1></div>
+		<div data-role="content">
+			<input type="text" id="inputString">
+			<button onclick="alert(SingletonObject.reverseMe($('#inputString').val()));">
+				Reverse Me</button>
+			<button onclick="alert(SingletonObject.splitMe($('#inputString').val()));">
+				Split Me</button>		
+			<button onclick="alert(SingletonObject.reverseAndSplitMe($('#inputString').val()));">
+				Reverse & Split Me</button>
+			<br>
+			<br>
+
+			<button data-theme="e" id="testButton">
+				Test All</button>
+		</div>
+	</div>
+
+	<div data-role="dialog" id="testDialog">
+		<div data-role="header"><h1>Test Result</h1></div>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Reverse Me</li>
+				<li id="testResult1">testing ...</li>
+			</ul>
+
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Split Me</li>
+				<li id="testResult2">testing ...</li>
+			</ul>
+
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Reverse & Split Me</li>
+				<li id="testResult3">testing ...</li>
+			</ul>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="js/test1.js"></script>
+<script>
+
+	/**
+	Exercise 1: 
+
+		Requirement: Complete the code in SingletonObject to make all three buttons in HTML work like theirs name.
+					 - reverseMe(): should reverse the inputString into outputString
+					 - splitMe(): should split characters from inputString with blank space
+					 - reverseAndSplitMe(): shoud do reverse and split sequentially.
+
+		Finish line: Pass all 3 cases when click "Test All"
+
+		Hints:
+			- string is an array of character, use it like array
+			- array index start from 0
+			- last array index = array.length -1
+			- to loop over array use "for" statement like example below:
+
+			  	for (var i=0; i<array.length; i++) {
+					somevar += somestring[i];	
+			  	}
+
+			  or in general form
+
+			  	for (var i= initialValue; testingCondition; incrementalStatement) {
+	
+			  	}
+
+			- "i--" make "for" run in reverse, make sure to change initial value and testing condition in reverse too
+			- do not for get to define variable with "var"
+			- end of statement should be ";"
+	*/
+	
+	var SingletonObject = function() {
+		return {
+
+			reverseMe: function(inputString) {
+				var outputString = inputString;
+				
+				// Fill your code below
+				/////////////////////////////////////////
+
+
+
+				
+				
+				/////////////////////////////////////////
+				// Your code should end above
+				
+				return outputString;
+			},
+			
+			splitMe: function(inputString) {
+				var outputString = inputString;
+				
+				// Fill your code below
+				/////////////////////////////////////////
+
+
+
+
+				
+				
+				/////////////////////////////////////////
+				// Your code should end above
+				
+				return outputString;
+			},
+			
+			reverseAndSplitMe: function(inputString) {
+				var outputString = inputString;
+				
+				// Fill your code below
+				/////////////////////////////////////////
+
+
+				
+				
+				/////////////////////////////////////////
+				// Your code should end above
+				
+				return outputString;
+			}
+		};
+	}();
+</script>
+</body>
+</html>
