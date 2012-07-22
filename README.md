@@ -1,7 +1,8 @@
 MobileHybridApp-ClassExercises
 ==============================
 
-For in-class training:
+## Fork, Clone and Code
+## when finish, Sync and Pull Request
 
 ### Exercise 1: Singleton is back
 * Complete the code in `ex1.html`.
