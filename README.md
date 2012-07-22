@@ -1,8 +1,12 @@
 MobileHybridApp-ClassExercises
 ==============================
 
-## Fork, Clone and Code
-## when finish, Sync and Pull Request
+### Fork, Clone and Code
+### when finish, Sync and Pull Request
+
+
+### Ready - Set - Go!
+
 
 ### Exercise 1: Singleton is back
 * Complete the code in `ex1.html`.
