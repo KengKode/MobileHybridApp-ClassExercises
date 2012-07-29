@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="startPage">
+		<div data-role="header"><h1>Are you ready?</h1></div>
+		<div data-role="content">
+			<div><button id="greetMeButton">Greet Me</button></div>
+		</div>
+	</div>
+
+	<div data-role="page" id="yourPage" data-add-back-btn="true">
+	</div>
+
+	<script>
+		$('#startPage').bind('pageinit', function() {
+			$('#greetMeButton').bind('click', function() {
+				$.mobile.changePage('#yourPage', {
+					role: 'page',
+					transition: 'pop',
+					reverse: 'true'
+				});
+			});
+		});
+
+		$('#yourPage').live('pagebeforecreate', function() {
+
+			var yourPage = $('#yourPage');
+			yourPage.html('');
+
+			/**
+			Objective: Create html inside `#yourPage` with JavaScript
+
+			Steps:
+				- Build Tags inside `#yourPage', make them look like this:
+
+					<div data-role="header"><h1>Greet Me</h1></div>
+					<div data-role="content">
+						Any Greting Message is Great!
+					</div>
+					<div data-role="footer" data-position="fixed"><h4>Bye</h4></div>
+
+				- Use Tag Builder like previous exercise or Lab 4 like these:
+
+					var header = $('<div>').attr('data-role', 'header').attr('data-theme', ...
+					var content = $('<div>')....
+					var footer = $('<d...
+
+					header.append('YOUR-HEADER'); // will set title for header
+					content.append...
+					footer.app...
+
+					yourPage.append(header).append(...
+					yourPage.page();
+
+			Finish Line:
+				- Your Page should work when click 'Greet Me'
+				- Color Theme on your page should match ex3.png
+
+			Hints:
+				- .attr() can be chained until you get the result.
+				- .append() can be chained too.
+				- do not forget to add attribute 'data-theme' to the `<div>`
+				- do not forget to append header, content, footer to yourPage
+				- do call yourPage.page() on your last statement
+
+
+
+			*/
+			//
+			// Enter your code below
+			//////////////////////////////////////////////////////////////
+			
+
+
+
+
+
+
+
+
+
+
+			//////////////////////////////////////////////////////////////
+			// Your code shold end above
+		})
+
+	</script>
+</body>
+</html>
